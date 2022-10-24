@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <script src="navigation.js" defer></script>
     <title>Space Tourism</title>
 </head>
 <body class="main-page-body">
@@ -15,7 +16,10 @@
         <img class="logo" alt="Space Logo" src="assets/shared/logo.svg" width="48" height="48">
     </a>
     <div class="decor-line"></div>
-    <nav class="navigation">
+    <button aria-controls="navigation" area-expanded="false" class="menu-button">
+        <span class="sr-only">Menu</span>
+    </button>
+    <nav id="navigation" class="navigation" data-visible="false">
         <ul class="navigation-list">
             <li class="navigation-par">
                 <a class="nav-links selected-link" href="#">
