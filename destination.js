@@ -90,7 +90,7 @@ async function dataChange(component, dataType, index) {
             break;
         case 'image': component.setAttribute('src', heavenlyInfo[index].image)
     }
-    
+
     if(!iosDevice) {
         component.style.opacity = '';
         await sleep(300);

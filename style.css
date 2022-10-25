@@ -98,11 +98,11 @@ a {
 }
 
 .selected-link {
-    box-shadow: var(--color-white) 0px -3px 0px 0px inset;
+    box-shadow: var(--color-white) 0 -3px 0 0 inset;
 }
 
 .nav-links:hover:not(.selected-link) {
-    box-shadow: var(--color-white-op-50) 0px -3px 0px 0px inset;
+    box-shadow: var(--color-white-op-50) 0 -3px 0 0 inset;
 }
 
 .navigation-par {
@@ -210,7 +210,7 @@ a {
 }
 
 .main-button:hover {
-    box-shadow: 0px 0px 0px 88px var(--color-white-op-10);
+    box-shadow: 0 0 0 88px var(--color-white-op-10);
 }
 
 /*----------------------------------------------------END-MAIN-PAGE---------------------------------------------------*/
@@ -222,13 +222,13 @@ a {
     background-size: cover;
 }
 
-.destination-main-content {
+.main-content {
     display: flex;
         justify-content: space-around;
     margin-top: -5%;
 }
 
-.destination-page-title {
+.page-title {
     margin-bottom: 100px;
 
     font-size: 28px;
@@ -237,7 +237,7 @@ a {
     text-transform: uppercase;
 }
 
-.destination-page-number {
+.page-number {
     margin-right: 28px;
 
     font-weight: 700;
@@ -253,7 +253,7 @@ a {
     /*flex-direction: column;*/
 }
 
-.heavenly-list {
+.list {
     display: flex;
     padding: 0 0 40px;
     margin-bottom: 0;
@@ -291,11 +291,11 @@ a {
 }
 
 .heavenly-button:not(.selected-body):hover > .heavenly-button-text {
-    box-shadow: var(--color-white-op-50) 0px -3px 0px 0px inset;
+    box-shadow: var(--color-white-op-50) 0 -3px 0 0 inset;
 }
 
 .selected-body > .heavenly-button-text{
-    box-shadow: var(--color-white) 0px -3px 0px 0px inset;
+    box-shadow: var(--color-white) 0 -3px 0 0 inset;
 }
 
 .heavenly-title {
@@ -351,6 +351,93 @@ a {
 }
 
 /*------------------------------------------------END-DESTINATION-PAGE------------------------------------------------*/
+
+/*-----------------------------------------------------CREW-PAGE------------------------------------------------------*/
+
+.crew-page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: black url("assets/crew/background-crew-desktop.jpg") no-repeat 100% 100%;
+    background-size: cover;
+}
+
+.crew-main {
+    width: 80%;
+    flex-direction: column;
+}
+
+.member-photo {
+    position: absolute;
+        bottom: 0;
+    margin-left: 47%;
+    z-index: -10;
+}
+
+.team-member-info {
+    width: 615px;
+    height: 305px;
+    margin-bottom: 120px;
+}
+
+.job-title {
+    margin: 0 0 15px;
+
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-white-op-50);
+    text-transform: uppercase;
+}
+
+.member-name {
+    margin: 0 0 27px;
+
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.member-description {
+    margin: 0;
+    max-width: 445px;
+
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 32px;
+    color: var(--color-light-blue);
+}
+
+.member-button {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-white-op-10);
+    transition: background-color .3s;
+}
+
+.selected-member {
+    background-color: var(--color-white)
+}
+
+.member-par:last-child > .member-button {
+    margin-right: 0;
+}
+
+.member-button:not(.selected-link):hover {
+    background-color: var(--color-white-op-50)
+}
+
+/*----------------------------------------------------END-CREW-PAGE---------------------------------------------------*/
+
 
 /*=======================================================TABLET=======================================================*/
 
@@ -445,7 +532,7 @@ a {
         width: 100%;
     }
 
-    .destination-page-title {
+    .page-title {
         align-self: flex-start;
         margin-left: 39px;
         margin-bottom: 60px;
@@ -477,6 +564,47 @@ a {
     }
 
     /*----------------------------------------------END-DESTINATION-PAGE----------------------------------------------*/
+
+    /*---------------------------------------------------CREW-PAGE----------------------------------------------------*/
+
+    .crew-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .team-member-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .job-title {
+        font-size: 24px;
+    }
+
+    .member-name {
+        font-size: 40px;
+    }
+
+    .member-description {
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .member-photo {
+        position: static;
+        margin: 0 0 0 55px;
+        width: calc(100% - 110px);
+        height: auto;
+    }
+
+    /*--------------------------------------------------END-CREW-PAGE-------------------------------------------------*/
 }
 
 /*=======================================================MOBILE=======================================================*/
@@ -532,11 +660,11 @@ a {
     }
 
     .selected-link {
-        box-shadow: inset -4px 0px 0px 0px var(--color-white);
+        box-shadow: inset -4px 0 0 0 var(--color-white);
     }
 
     .nav-links:not(.selected-link):hover {
-        box-shadow: inset -4px 0px 0px 0px var(--color-white-op-50);
+        box-shadow: inset -4px 0 0 0 var(--color-white-op-50);
     }
 
     .menu-button {
@@ -600,7 +728,7 @@ a {
         background-size: cover;
     }
 
-    .destination-page-title {
+    .page-title {
         align-self: center;
         margin-left: 0;
         margin-bottom: 32px;
@@ -608,7 +736,7 @@ a {
         font-size: 16px;
     }
 
-    .destination-page-number {
+    .page-number {
         margin-right: 18px;
     }
 
@@ -644,4 +772,41 @@ a {
     }
 
     /*----------------------------------------------END-DESTINATION-PAGE----------------------------------------------*/
+
+    /*---------------------------------------------------CREW-PAGE----------------------------------------------------*/
+
+    .crew-page-title {
+        order: -2;
+    }
+
+    .member-additional-info {
+        display: flex;
+            justify-content: center;
+        order: -1;
+        border-bottom: 1px solid var(--color-white-op-10);
+    }
+
+    .member-photo {
+        width: calc(100% - 40px);
+        margin-left: 0;
+    }
+
+    .member-switch {
+        order: -1;
+    }
+
+    .job-title {
+        font-size: 16px;
+    }
+
+    .member-name {
+        font-size: 24px;
+    }
+
+    .member-description {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /*--------------------------------------------------END-CREW-PAGE-------------------------------------------------*/
 }

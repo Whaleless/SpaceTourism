@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <script src="crew.js" defer></script>
     <script src="navigation.js" defer></script>
-    <title>Space Tourism</title>
+    <title>Crew</title>
 </head>
-<body class="main-page-body">
+<body class="crew-page-body">
 <header class="page-header">
     <a href="index.html">
         <img class="logo" alt="Space Logo" src="assets/shared/logo.svg" width="48" height="48">
@@ -22,7 +23,7 @@
     <nav id="navigation" class="navigation" data-visible="false">
         <ul class="navigation-list">
             <li class="navigation-par">
-                <a class="nav-links selected-link" href="index.html">
+                <a class="nav-links" href="index.html">
                     <span class="par-number">01</span>
                     Home
                 </a>
@@ -34,7 +35,7 @@
                 </a>
             </li>
             <li class="navigation-par">
-                <a class="nav-links" href="crew.html">
+                <a class="nav-links selected-link" href="crew.html">
                     <span class="par-number">03</span>
                     Crew
                 </a>
@@ -48,18 +49,39 @@
         </ul>
     </nav>
 </header>
-<main>
-    <article class="main-text">
-        <h2>So, you want to travel to</h2>
-        <h1>Space</h1>
-        <h3>
-            Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind
-            of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-        </h3>
+<main class="main-content crew-main">
+    <h1 class="page-title crew-page-title">
+        <span class="page-number">02</span>Meet your crew
+    </h1>
+    <article class="crew-info">
+        <div class="team-member-info">
+            <h3 class="job-title">Commander</h3>
+            <h2 class="member-name">Douglas Hurley</h2>
+            <p class="member-description">
+                Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut.
+                He launched into space for the third time as commander of Crew Dragon Demo-2.
+            </p>
+        </div>
+        <nav class="member-switch">
+            <ul class="list">
+                <li class="member-par">
+                    <button class="member-button selected-member"></button>
+                </li>
+                <li class="member-par">
+                    <button class="member-button"></button>
+                </li>
+                <li class="member-par">
+                    <button class="member-button"></button>
+                </li>
+                <li class="member-par">
+                    <button class="member-button"></button>
+                </li>
+            </ul>
+        </nav>
     </article>
-    <a href="destination.html" class="main-button">
-        Explore
-    </a>
+    <aside class="member-additional-info">
+        <img class="member-photo" alt="Member's photo" src="assets/crew/image-douglas-hurley.png">
+    </aside>
 </main>
 </body>
 </html>
