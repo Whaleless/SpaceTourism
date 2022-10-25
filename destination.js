@@ -70,9 +70,14 @@ heavenlyButtons.forEach((button, index) => {
 })
 
 async function dataChange(component, dataType, index) {
-    component.style.transition = 'opacity .3s';
-    component.style.opacity = '0';
-    await sleep(300);
+
+    let iosDevice = /iPhone/i.test(navigator.userAgent);
+
+    if(!iosDevice) {
+        component.style.transition = 'opacity .3s';
+        component.style.opacity = '0';
+        await sleep(300);
+    }
     switch(dataType) {
         case 'name': component.innerHTML = heavenlyInfo[index].name;
             break;
@@ -84,8 +89,9 @@ async function dataChange(component, dataType, index) {
             break;
         case 'image': component.setAttribute('src', heavenlyInfo[index].image)
     }
-
-    component.style.opacity = '1';
-    await sleep(300);
-    component.style.transition = '';
+    if(!iosDevice)) {
+        component.style.opacity = '';
+        await sleep(300);
+        component.style.transition = '';
+    }
 }
