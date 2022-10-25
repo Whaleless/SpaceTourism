@@ -78,6 +78,7 @@ async function dataChange(component, dataType, index) {
         component.style.opacity = '0';
         await sleep(300);
     }
+
     switch(dataType) {
         case 'name': component.innerHTML = heavenlyInfo[index].name;
             break;
@@ -89,7 +90,8 @@ async function dataChange(component, dataType, index) {
             break;
         case 'image': component.setAttribute('src', heavenlyInfo[index].image)
     }
-    if(!iosDevice)) {
+    
+    if(!iosDevice) {
         component.style.opacity = '';
         await sleep(300);
         component.style.transition = '';
