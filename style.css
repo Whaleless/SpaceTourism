@@ -620,6 +620,7 @@ a {
     .page-header {
         margin-left: 24px;
         width: calc(100% - 24px);
+        min-height: 96px;
     }
 
     .navigation {
