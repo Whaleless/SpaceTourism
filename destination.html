@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="prefetch prerender" href="assets/destination/image-mars.png" />
+    <link rel="prefetch prerender" href="assets/destination/image-europa.png" />
+    <link rel="prefetch prerender" href="assets/destination/image-titan.png" />
+  <script src="destination.js" defer></script>
+  <script src="navigation.js" defer></script>
+    <title>Destination</title>
+</head>
+<body class="destination-page-body">
+<header class="page-header">
+  <a href="index.html">
+    <img class="logo" alt="Space Logo" src="assets/shared/logo.svg" width="48" height="48">
+  </a>
+  <div class="decor-line"></div>
+  <button aria-controls="navigation" area-expanded="false" class="menu-button">
+    <span class="sr-only">Menu</span>
+  </button>
+  <nav id="navigation" class="navigation" data-visible="false">
+    <ul class="navigation-list">
+      <li class="navigation-par">
+        <a class="nav-links" href="index.html">
+          <span class="par-number">01</span>
+          Home
+        </a>
+      </li>
+      <li class="navigation-par">
+        <a class="nav-links selected-link" href="destination.html">
+          <span class="par-number">02</span>
+          Destination
+        </a>
+      </li>
+      <li class="navigation-par">
+        <a class="nav-links" href="#">
+          <span class="par-number">03</span>
+          Crew
+        </a>
+      </li>
+      <li class="navigation-par">
+        <a class="nav-links" href="#">
+          <span class="par-number">04</span>
+          Technology
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="destination-main-content">
+  <aside class="destination-additional-info">
+    <h1 class="destination-page-title">
+      <span class="destination-page-number">01</span>Pick your destination
+    </h1>
+    <img alt="Heavenly body image" class="heavenly-body-image" src="assets/destination/image-moon.png" width="445" height="445">
+  </aside>
+  <article class="heavenly-info">
+    <nav class="heavenly-navigation">
+      <ul class="heavenly-list">
+          <li class="heavenly-par">
+            <button class="heavenly-button moon-button selected-body">
+              <span class="heavenly-button-text">Moon</span>
+            </button>
+          </li>
+          <li class="heavenly-par">
+            <button class="heavenly-button mars-button">
+              <span class="heavenly-button-text">Mars</span>
+            </button>
+          </li>
+          <li class="heavenly-par">
+            <button class="heavenly-button europa-button">
+              <span class="heavenly-button-text">Europa</span>
+            </button>
+          </li>
+          <li class="heavenly-par">
+            <button class="heavenly-button titan-button">
+              <span class="heavenly-button-text">Titan</span>
+            </button>
+          </li>
+      </ul>
+    </nav>
+    <h2 class="heavenly-title">
+      Moon
+    </h2>
+    <h3 class="heavenly-description">
+      See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come
+      back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+    </h3>
+    <div class="heavenly-options">
+      <div class="distance-option option">
+        <label class="distance-label option-label">
+          Avg. distance
+        </label>
+        <p class="distance-value option-value">
+          384,400 km
+        </p>
+      </div>
+      <div class="time-option option">
+        <label class="time-label option-label">
+          Est. travel time
+        </label>
+        <p class="time-value option-value">
+          3 Days
+        </p>
+      </div>
+    </div>
+  </article>
+</main>
+</body>
+</html>

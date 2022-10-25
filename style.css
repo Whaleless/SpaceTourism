@@ -1,4 +1,4 @@
-/*=======================================================SHARED=======================================================*/
+/*-------------------------------------------------------SHARED-------------------------------------------------------*/
 
 :root {
     --color-white: #fff;
@@ -15,6 +15,14 @@ html, body {
 
     color: var(--color-white);
     font-family: 'Barlow Condensed', sans-serif;
+
+    overflow-x: hidden;
+}
+
+main {
+    position: static;
+    height: auto;
+    width: 100%;
 }
 
 a {
@@ -36,20 +44,11 @@ a {
     white-space: nowrap;
 }
 
-/*=====================================================END-SHARED=====================================================*/
+/*-----------------------------------------------------END-SHARED-----------------------------------------------------*/
 
-.main-page-body {
-    background: url("assets/home/Bitmap.png"), url("assets/home/added.png"), black;
-    background-repeat: no-repeat, repeat;
-    background-position: right center, left top;
-    background-size: auto 100%, auto 100%;
+/*-------------------------------------------------------HEADER-------------------------------------------------------*/
 
-    overflow-x:hidden;
-}
-
-/*=======================================================HEADER=======================================================*/
-
-.main-page-header {
+.page-header {
     display: flex;
         align-items: center;
     position: relative;
@@ -141,13 +140,14 @@ a {
     opacity: .25;
 }
 
-/*=====================================================END-HEADER=====================================================*/
+/*-----------------------------------------------------END-HEADER-----------------------------------------------------*/
 
-main {
-    position: static;
-    bottom: 0;
-    height: auto;
-    width: 100%;
+/*------------------------------------------------------MAIN-PAGE------------------------------------------------------*/
+.main-page-body {
+    background: url("assets/home/Bitmap.png"), url("assets/home/added.png"), black;
+    background-repeat: no-repeat, repeat;
+    background-position: right center, left top;
+    background-size: auto 100%, auto 100%;
 }
 
 .main-text {
@@ -213,16 +213,152 @@ main {
     box-shadow: 0px 0px 0px 88px var(--color-white-op-10);
 }
 
+/*----------------------------------------------------END-MAIN-PAGE---------------------------------------------------*/
+
+/*--------------------------------------------------DESTINATION-PAGE--------------------------------------------------*/
+
+.destination-page-body {
+    background: black url("assets/destination/background-destination-desktop.jpg") no-repeat 100% 100%;
+    background-size: cover;
+}
+
+.destination-main-content {
+    display: flex;
+        justify-content: space-around;
+    margin-top: -5%;
+}
+
+.destination-page-title {
+    margin-bottom: 100px;
+
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.destination-page-number {
+    margin-right: 28px;
+
+    font-weight: 700;
+    opacity: .25;
+}
+
+.heavenly-body-image {
+    margin-bottom: 25px;
+}
+
+.heavenly-info {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+
+.heavenly-list {
+    display: flex;
+    padding: 0 0 40px;
+    margin-bottom: 0;
+
+    list-style: none;
+}
+
+.heavenly-button {
+    display: inline;
+    background: none;
+    border: none;
+    margin-right: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.heavenly-par:last-child > .heavenly-button {
+    margin-right: 0;
+}
+
+.heavenly-button-text {
+    padding-bottom: 12px;
+    transition: box-shadow .3s;
+
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-white);
+}
+
+.heavenly-button:not(.selected-body) > .heavenly-button-text {
+    color: var(--color-light-blue);
+}
+
+.heavenly-button:not(.selected-body):hover > .heavenly-button-text {
+    box-shadow: var(--color-white-op-50) 0px -3px 0px 0px inset;
+}
+
+.selected-body > .heavenly-button-text{
+    box-shadow: var(--color-white) 0px -3px 0px 0px inset;
+}
+
+.heavenly-title {
+    margin: 0 0 14px;
+
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.heavenly-description {
+    max-width: 445px;
+    margin: 0 0 55px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--color-light-blue);
+}
+
+.heavenly-options {
+    display: flex;
+
+    border-top: 1px solid #383B4B;
+}
+
+.distance-option {
+    margin-right: 80px;
+}
+
+.option {
+    margin-top: 30px;
+}
+
+.option-label {
+    color: var(--color-light-blue);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.option-value {
+    margin-top: 12px;
+
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: uppercase;
+
+}
+
+/*------------------------------------------------END-DESTINATION-PAGE------------------------------------------------*/
+
 /*=======================================================TABLET=======================================================*/
+
 @media (max-width: 1080px) {
-    .main-page-body {
-        background: black url("assets/home/background-home-tablet.jpg") no-repeat;
-        background-size: cover;
-    }
 
-    /*=====================================================HEADER=====================================================*/
+    /*-----------------------------------------------------HEADER-----------------------------------------------------*/
 
-    .main-page-header {
+    .page-header {
         top: 0;
         width: calc(100% - 39px);
         margin-left: 39px;
@@ -253,7 +389,14 @@ main {
         display: none;
     }
 
-    /*===================================================END-HEADER===================================================*/
+    /*---------------------------------------------------END-HEADER---------------------------------------------------*/
+
+    /*----------------------------------------------------MAIN-PAGE----------------------------------------------------*/
+
+    .main-page-body {
+        background: black url("assets/home/background-home-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
 
     main {
         display: flex;
@@ -284,22 +427,69 @@ main {
         width: 240px;
         height: 240px;
     }
-}
 
-/*=======================================================MOBILE=======================================================*/
-@media all and (max-width: 480px) {
-    .main-page-body {
-        background: black url("assets/home/background-home-mobile.jpg")no-repeat;
+    /*--------------------------------------------------END-MAIN-PAGE-------------------------------------------------*/
+
+    /*------------------------------------------------DESTINATION-PAGE------------------------------------------------*/
+
+
+    .destination-page-body {
+        background: black url("assets/destination/background-destination-tablet.jpg") no-repeat 100% 100%;
         background-size: cover;
     }
 
-    /*=====================================================HEADER=====================================================*/
+    .destination-additional-info {
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+        width: 100%;
+    }
+
+    .destination-page-title {
+        align-self: flex-start;
+        margin-left: 39px;
+        margin-bottom: 60px;
+
+        font-size: 20px;
+    }
+
+    .heavenly-body-image{
+        width: 300px;
+        height: 300px;
+    }
+
+    .heavenly-info {
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+        width: 90%;
+    }
+
+    .heavenly-title {
+        font-size: 80px;
+    }
+
+    .heavenly-description {
+        text-align: center;
+        max-width: none;
+
+        font-size: 16px;
+    }
+
+    /*----------------------------------------------END-DESTINATION-PAGE----------------------------------------------*/
+}
+
+/*=======================================================MOBILE=======================================================*/
+
+@media all and (max-width: 480px) {
+
+    /*-----------------------------------------------------HEADER-----------------------------------------------------*/
     .logo {
         width: 40px;
         height: 40px;
     }
 
-    .main-page-header {
+    .page-header {
         margin-left: 24px;
         width: calc(100% - 24px);
     }
@@ -366,7 +556,14 @@ main {
         background: url("assets/shared/icon-close.svg") no-repeat;
     }
 
-    /*===================================================END-HEADER===================================================*/
+    /*---------------------------------------------------END-HEADER---------------------------------------------------*/
+
+    /*----------------------------------------------------MAIN-PAGE----------------------------------------------------*/
+
+    .main-page-body {
+        background: black url("assets/home/background-home-mobile.jpg")no-repeat;
+        background-size: cover;
+    }
 
     .main-text {
         width: 80%;
@@ -393,4 +590,58 @@ main {
 
         font-size: 20px;
     }
+
+    /*--------------------------------------------------END-MAIN-PAGE-------------------------------------------------*/
+
+    /*------------------------------------------------DESTINATION-PAGE------------------------------------------------*/
+
+    .destination-page-body {
+        background: black url("assets/destination/background-destination-mobile.jpg") no-repeat 100% 100%;
+        background-size: cover;
+    }
+
+    .destination-page-title {
+        align-self: center;
+        margin-left: 0;
+        margin-bottom: 32px;
+
+        font-size: 16px;
+    }
+
+    .destination-page-number {
+        margin-right: 18px;
+    }
+
+    .heavenly-body-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .heavenly-title {
+        font-size: 56px;
+    }
+
+    .heavenly-description {
+        font-size: 15px;
+    }
+
+    .heavenly-options, .option {
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+    }
+
+    .heavenly-options {
+        width: 90%;
+    }
+
+    .distance-option {
+        margin-right: 0;
+    }
+
+    .time-option {
+        margin-top: 4px;
+    }
+
+    /*----------------------------------------------END-DESTINATION-PAGE----------------------------------------------*/
 }
