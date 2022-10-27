@@ -1,17 +1,12 @@
+const heavenlyButtons = document.querySelectorAll('.heavenly-button');
+
 const name = document.querySelector('.heavenly-title');
 const description = document.querySelector('.heavenly-description');
 const distance = document.querySelector('.distance-value');
 const time = document.querySelector('.time-value');
 const image = document.querySelector('.heavenly-body-image');
 
-// const moonButton = document.querySelector('.moon-button');
-// const marsButton = document.querySelector('.mars-button');
-// const europaButton = document.querySelector('.europa-button');
-// const titanButton = document.querySelector('.titan-button');
-
-const heavenlyButtons = document.querySelectorAll('.heavenly-button');
-
-const heavenlyInfo = [
+const data = [
     {
         name: 'Moon',
         description: 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain' +
@@ -68,32 +63,3 @@ heavenlyButtons.forEach((button, index) => {
     }
     })
 })
-
-async function dataChange(component, dataType, index) {
-
-    let iosDevice = /iPhone/i.test(navigator.userAgent);
-
-    if(!iosDevice) {
-        component.style.transition = 'opacity .3s';
-        component.style.opacity = '0';
-        await sleep(300);
-    }
-
-    switch(dataType) {
-        case 'name': component.innerHTML = heavenlyInfo[index].name;
-            break;
-        case 'description': component.innerHTML = heavenlyInfo[index].description;
-            break;
-        case 'time': component.innerHTML = heavenlyInfo[index].time;
-            break;
-        case 'distance': component.innerHTML = heavenlyInfo[index].distance;
-            break;
-        case 'image': component.setAttribute('src', heavenlyInfo[index].image)
-    }
-
-    if(!iosDevice) {
-        component.style.opacity = '';
-        await sleep(300);
-        component.style.transition = '';
-    }
-}

@@ -7,16 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
-    <link rel="prefetch prerender" href="assets/crew/image-anousheh-ansari.png" />
-    <link rel="prefetch prerender" href="assets/crew/image-mark-shuttleworth.png" />
-    <link rel="prefetch prerender" href="assets/crew/image-victor-glover.png" />
-    <script src="crew.js" defer></script>
+    <link rel="prefetch prerender" href="assets/technology/image-space-capsule-landscape.jpg" />
+    <link rel="prefetch prerender" href="assets/technology/image-spaceport-landscape.jpg" />
+    <script src="technology.js" defer></script>
     <script src="shared.js" defer></script>
-
-    <script src="navigation.js" defer></script>
-    <title>Crew</title>
+    <script src="navigation.js" defer></script>    <title>Technology</title>
 </head>
-<body class="crew-page-body">
+<body class="technology-page-body">
 <header class="page-header">
     <a href="index.html">
         <img class="logo" alt="Space Logo" src="assets/shared/logo.svg" width="48" height="48">
@@ -40,12 +37,12 @@
                 </a>
             </li>
             <li class="navigation-par">
-                <a class="nav-links selected-link" href="crew.html">
+                <a class="nav-links" href="crew.html">
                     <span class="par-number">03</span>
                     Crew
                 </a>
             </li>
-            <li class="navigation-par">
+            <li class="navigation-par selected-link">
                 <a class="nav-links" href="technology.html">
                     <span class="par-number">04</span>
                     Technology
@@ -54,39 +51,35 @@
         </ul>
     </nav>
 </header>
-<main class="main-content crew-main">
-    <h1 class="page-title crew-page-title">
-        <span class="page-number">02</span>Meet your crew
+<main class="main-content tech-main">
+    <h1 class="page-title">
+        <span class="page-number">03</span>Space Launch 101
     </h1>
-    <article class="crew-info">
-        <div class="team-member-info">
-            <h3 class="job-title">Commander</h3>
-            <h2 class="member-name">Douglas Hurley</h2>
-            <p class="member-description">
-                Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut.
-                He launched into space for the third time as commander of Crew Dragon Demo-2.
-            </p>
-        </div>
-        <nav class="member-switch">
-            <ul class="list">
-                <li class="member-par">
-                    <button class="member-button selected-member"></button>
+    <div class="tech-info">
+        <nav class="tech-navigation">
+            <ul class="tech-list">
+                <li class="tech-par">
+                    <button class="tech-button selected-tech">1</button>
                 </li>
-                <li class="member-par">
-                    <button class="member-button"></button>
+                <li class="tech-par">
+                    <button class="tech-button">2</button>
                 </li>
-                <li class="member-par">
-                    <button class="member-button"></button>
-                </li>
-                <li class="member-par">
-                    <button class="member-button"></button>
+                <li class="tech-par">
+                    <button class="tech-button">3</button>
                 </li>
             </ul>
         </nav>
-    </article>
-    <aside class="member-additional-info">
-        <img class="member-photo" alt="Member's photo" src="assets/crew/image-douglas-hurley.png">
-    </aside>
+        <article class="tech-article">
+            <h3 class="tech-page-description">The Terminology...</h3>
+            <h2 class="tech-term">Launch vehicle</h2>
+            <p class="tech-term-definition">
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's
+                surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in
+                operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+            </p>
+        </article>
+        <img class="tech-img" src="assets/technology/image-launch-vehicle-portrait.jpg">
+    </div>
 </main>
 </body>
 </html>

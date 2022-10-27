@@ -5,8 +5,7 @@ const title = document.querySelector('.job-title');
 const description = document.querySelector('.member-description');
 const image = document.querySelector('.member-photo');
 
-
-const memberData = [
+const data = [
     {
         name: 'Douglas Hurley',
         title: 'Commander',
@@ -40,10 +39,6 @@ const memberData = [
     }
 ]
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 memberButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         if(!button.classList.contains('selected-member')) {
@@ -59,30 +54,3 @@ memberButtons.forEach((button, index) => {
         }
     })
 })
-
-async function dataChange(component, dataType, index) {
-
-    let iosDevice = /iPhone/i.test(navigator.userAgent);
-
-    if(!iosDevice) {
-        component.style.transition = 'opacity .3s';
-        component.style.opacity = '0';
-        await sleep(300);
-    }
-
-    switch(dataType) {
-        case 'name': component.innerHTML = memberData[index].name;
-            break;
-        case 'title': component.innerHTML = memberData[index].title;
-            break;
-        case 'description': component.innerHTML = memberData[index].description;
-            break;
-        case 'image': component.setAttribute('src', memberData[index].image)
-    }
-
-    if(!iosDevice) {
-        component.style.opacity = '';
-        await sleep(300);
-        component.style.transition = '';
-    }
-}
