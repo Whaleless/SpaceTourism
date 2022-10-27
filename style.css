@@ -5,6 +5,8 @@
     --color-white-op-50: rgba(255, 255, 255, 0.5);
     --color-white-op-10: rgba(255, 255, 255, 0.1);
     --color-light-blue: #D0D6F9;
+
+    --content: url('/assets/technology/image-launch-vehicle-landscape.jpg');
 }
 
 html, body {
@@ -542,7 +544,7 @@ a {
 
 /*=======================================================TABLET=======================================================*/
 
-@media (max-width: 1080px) {
+@media (max-width: 1079px) {
 
     /*-----------------------------------------------------HEADER-----------------------------------------------------*/
 
@@ -708,6 +710,57 @@ a {
     /*--------------------------------------------------END-CREW-PAGE-------------------------------------------------*/
 
     /*-------------------------------------------------TECHNOLOGY-PAGE------------------------------------------------*/
+
+    .tech-main {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .tech-info {
+        flex-direction: column;
+    }
+
+    .tech-article {
+            align-items: center;
+            text-align: center;
+        width: 80%;
+        max-width: none;
+        margin-left: 10%;
+        margin-bottom: 40px;
+    }
+
+    .tech-list {
+        flex-direction: row;
+            justify-content: center;
+        margin-top: 55px;
+    }
+
+    .tech-par {
+        margin-right: 40px;
+        margin-bottom: 0;
+    }
+
+    .tech-par:last-child {
+        margin-right: 0;
+    }
+
+    .tech-button {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+    .tech-img {
+        content: var(--content);
+        width: 105%;
+        order: -1;
+    }
+
+    .tech-term {
+        font-size: 40px;
+    }
+
 
 
     /*-----------------------------------------------END-TECHNOLOGY-PAGE----------------------------------------------*/
@@ -917,7 +970,14 @@ a {
     /*--------------------------------------------------END-CREW-PAGE-------------------------------------------------*/
 
     /*-------------------------------------------------TECHNOLOGY-PAGE------------------------------------------------*/
+    
+    .tech-term {
+        font-size: 24px;
+    }
 
+    .tech-term-definition {
+        font-size: 15px;
+    }
 
     /*-----------------------------------------------END-TECHNOLOGY-PAGE----------------------------------------------*/
 }

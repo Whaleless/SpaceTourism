@@ -25,6 +25,8 @@ async function dataChange(component, dataType, index) {
         case 'distance': component.innerHTML = data[index].distance;
             break;
         case 'image': component.setAttribute('src', data[index].image);
+            break;
+        case 'wideImage': component.style.setProperty('--content', data[index].wideImage)
     }
 
     if(!iosDevice) {
