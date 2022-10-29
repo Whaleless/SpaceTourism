@@ -1,0 +1,11 @@
+{
+  "name": "SpaceTourism",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}

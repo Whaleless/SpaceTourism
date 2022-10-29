@@ -882,12 +882,7 @@ a {
     /*--------------------------------------------------END-MAIN-PAGE-------------------------------------------------*/
 
     /*------------------------------------------------DESTINATION-PAGE------------------------------------------------*/
-
-    .destination-page-body {
-        background: black url("assets/destination/background-destination-mobile.jpg") no-repeat 100% 100%;
-        background-size: cover;
-    }
-
+    
     .page-title {
         align-self: center;
         margin-left: 0;
