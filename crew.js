@@ -1,3 +1,5 @@
+import image_1 from "assets/crew/image-mark-shuttleworth.png";
+
 const memberButtons = document.querySelectorAll('.member-button');
 
 const name = document.querySelector('.member-name');
