@@ -1,11 +1,11 @@
-import image_1 from "assets/crew/image-mark-shuttleworth.png";
-
 const memberButtons = document.querySelectorAll('.member-button');
 
 const name = document.querySelector('.member-name');
 const title = document.querySelector('.job-title');
 const description = document.querySelector('.member-description');
 const image = document.querySelector('.member-photo');
+
+const image1 = require("assets/crew/image-mark-shuttleworth.png");
 
 const data = [
     {
