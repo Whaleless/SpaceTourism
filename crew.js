@@ -1,7 +1,3 @@
-import image1 from "/assets/crew/image-douglas-hurley.png";
-import image2 from "/assets/crew/image-mark-shuttleworth.png";
-import image3 from "/assets/crew/image-victor-glover.png";
-import image4 from "/assets/crew/image-anousheh-ansari.png";
 
 const memberButtons = document.querySelectorAll('.member-button');
 
@@ -59,3 +55,8 @@ memberButtons.forEach((button, index) => {
         }
     })
 })
+
+import image1 from "/assets/crew/image-douglas-hurley.png";
+import image2 from "/assets/crew/image-mark-shuttleworth.png";
+import image3 from "/assets/crew/image-victor-glover.png";
+import image4 from "/assets/crew/image-anousheh-ansari.png";
