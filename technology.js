@@ -1,3 +1,7 @@
+import image1 from "/assets/technology/image-launch-vehicle-landscape.jpg";
+import image2 from "/assets/technology/image-spaceport-landscape.jpg";
+import image3 from "/assets/technology/image-space-capsule-landscape.jpg";
+
 const techButtons = document.querySelectorAll('.tech-button');
 
 const title = document.querySelector('.tech-term');

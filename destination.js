@@ -1,3 +1,8 @@
+import image1 from "/assets/destination/image-moon.png";
+import image2 from "/assets/destination/image-mars.png";
+import image3 from "/assets/destination/image-europa.png";
+import image4 from "/assets/destination/image-titan.png";
+
 const heavenlyButtons = document.querySelectorAll('.heavenly-button');
 
 const name = document.querySelector('.heavenly-title');
