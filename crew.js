@@ -5,8 +5,6 @@ const title = document.querySelector('.job-title');
 const description = document.querySelector('.member-description');
 const image = document.querySelector('.member-photo');
 
-const image1 = require("assets/crew/image-mark-shuttleworth.png");
-
 const data = [
     {
         name: 'Douglas Hurley',
